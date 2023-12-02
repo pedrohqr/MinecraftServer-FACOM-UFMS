@@ -1,2 +1,3 @@
-# MinecraftServer-FACOM
- 
+# MinecraftServer 1.12.2 FACOM - UFMS
+- Extraia essa pasta e cole na sua pasta `.minecraft\versions\FACOM`.
+- Recomendo uso do `TLauncher`.
