@@ -1,0 +1,115 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  TLSkinCapeHookLoader (tlskincape1.12.2-1.4.jar)
+Contact their authors BEFORE contacting forge
+
+// There are four lights!
+
+Time: 12/2/23 12:05 PM
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from Advanced Machines (advanced_machines)
+Caused by: java.lang.NoSuchMethodError: ic2.core.block.invslot.InvSlotProcessableGeneric.<init>(Lic2/core/block/TileEntityInventory;Ljava/lang/String;ILic2/api/recipe/IMachineRecipeManager;)V
+	at com.chocohead.AdvMachines.te.TileEntityHeatingMachine.<init>(TileEntityHeatingMachine.java:82)
+	at com.chocohead.AdvMachines.te.TileEntityHeatingMachine.<init>(TileEntityHeatingMachine.java:68)
+	at com.chocohead.AdvMachines.te.TileEntityHeatingMachine.<init>(TileEntityHeatingMachine.java:64)
+	at com.chocohead.AdvMachines.te.TileEntityRotaryMacerator.<init>(TileEntityRotaryMacerator.java:15)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at java.lang.Class.newInstance(Class.java:442)
+	at com.chocohead.AdvMachines.te.AdvancedMachineTEs.buildDummies(AdvancedMachineTEs.java:191)
+	at com.chocohead.AdvMachines.AdvancedMachines.init(AdvancedMachines.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:637)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
+	at net.minecraftforge.fml.common.Loader.initializeMods(Loader.java:749)
+	at net.minecraftforge.fml.client.FMLClientHandler.finishMinecraftLoading(FMLClientHandler.java:336)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:535)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:378)
+	at net.minecraft.client.main.Main.main(SourceFile:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1064761000 bytes (1015 MB) / 2751463424 bytes (2624 MB) up to 3154116608 bytes (3008 MB)
+	JVM Flags: 7 total; -Xmx3000M -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2859 Optifine OptiFine_1.12.2_HD_U_G5 15 mods loaded, 15 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID                         | Version           | Source                                        | Signature                                |
+	|:----- |:-------------------------- |:----------------- |:--------------------------------------------- |:---------------------------------------- |
+	| LCHI  | minecraft                  | 1.12.2            | minecraft.jar                                 | None                                     |
+	| LCHI  | mcp                        | 9.42              | minecraft.jar                                 | None                                     |
+	| LCHI  | FML                        | 8.0.99.99         | forge-1.12.2-14.23.5.2859.jar                 | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHI  | forge                      | 14.23.5.2859      | forge-1.12.2-14.23.5.2859.jar                 | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHI  | ic2                        | 2.8.222-ex112     | industrialcraft-2-2.8.222-ex112.jar           | de041f9f6187debbc77034a344134053277aa3b0 |
+	| LCHE  | advanced_machines          | 61.0.1            | Advanced Machines-61.0.1.jar                  | None                                     |
+	| LCH   | compactsolars              | 1.12.2-5.0.18.341 | CompactSolars-1.12.2-5.0.18.341-universal.jar | None                                     |
+	| LCH   | falling_tree               | 2.4.0             | FallingTree-1.12.2-2.4.0.jar                  | None                                     |
+	| LCH   | gravestone                 | 1.10.3            | gravestone-1.10.3.jar                         | None                                     |
+	| LCH   | gravisuite                 | 3.1.1             | GravitationSuite_1.12.2_3.1.1.jar             | None                                     |
+	| LCH   | waila                      | 1.8.26            | Hwyla-1.8.26-B41_1.12.2.jar                   | None                                     |
+	| LCH   | jei                        | 4.16.1.1001       | jei_1.12.2-4.16.1.1001.jar                    | None                                     |
+	| LCH   | journeymap                 | 1.12.2-5.7.1      | journeymap-1.12.2-5.7.1.jar                   | None                                     |
+	| LCH   | tlauncher_custom_cape_skin | 1.4               | tlskincape1.12.2-1.4.jar                      | None                                     |
+	| LCH   | travelersbackpack          | 1.0.35            | TravelersBackpack-1.12.2-1.0.35.jar           | None                                     |
+
+	Loaded coremods (and transformers): 
+TLSkinCapeHookLoader (tlskincape1.12.2-1.4.jar)
+  gloomyfolken.hooklib.minecraft.PrimaryClassTransformer
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 546.17' Renderer: 'NVIDIA GeForce RTX 3060/PCIe/SSE2'
+	OptiFine Version: OptiFine_1.12.2_HD_U_G5
+	OptiFine Build: 20210124-142939
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 546.17
+	OpenGlRenderer: NVIDIA GeForce RTX 3060/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 12
